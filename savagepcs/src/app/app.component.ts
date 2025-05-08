@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { CharactersService } from './services/characters.service';
 
 @Component({
   selector: 'app-root',
@@ -8,5 +9,9 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'savagepcs';
+  pcService = inject(CharactersService);
+
+  constructor() {
+    this.pcService.getPCList();
+  }
 }
