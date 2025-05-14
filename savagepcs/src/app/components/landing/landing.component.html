@@ -1,6 +1,10 @@
-<h4>Characters</h4>
-<ul>
-    @for (pc of pcService.pcList(); track pc) {
-        <li><a href="\">{{pc.pcName}}</a></li>
-    }
-</ul>
+<mat-card>
+    <mat-card-title>Characters</mat-card-title>
+    <mat-card-content>
+        <mat-nav-list>
+            @for (pc of pcService.pcList(); track pc) {
+                <a mat-list-item href="\character\{{pc.id}}">{{pc.pcName}}</a>
+            }
+        </mat-nav-list>
+    </mat-card-content>
+</mat-card>
