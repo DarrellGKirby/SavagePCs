@@ -1,0 +1,12 @@
+.display {
+    width: 275px;
+    border-bottom: 1px solid lightgray;
+}
+
+mat-card {
+    width: 300px;
+}
+
+b {
+    color: gray;
+}
