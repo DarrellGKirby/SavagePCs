@@ -2,10 +2,11 @@ import { Component, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CharactersService } from '../../services/characters.service';
 import { DescriptionComponent } from "./description/description.component";
+import { AttributesComponent } from "./attributes/attributes.component";
 
 @Component({
   selector: 'app-character',
-  imports: [DescriptionComponent],
+  imports: [DescriptionComponent, AttributesComponent],
   templateUrl: './character.component.html',
   styleUrl: './character.component.css'
 })

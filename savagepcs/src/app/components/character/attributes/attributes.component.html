@@ -1,0 +1,11 @@
+<mat-card>
+    <mat-card-title>Attributes</mat-card-title>
+    <mat-card-content>
+        @for (attribute of attributes(); track $index) {
+            <div class="flex-container">
+                <b>{{attribute.name}}</b>
+                <img [src]="attribute.die.imagePath">
+            </div>
+        }
+    </mat-card-content>
+</mat-card>
