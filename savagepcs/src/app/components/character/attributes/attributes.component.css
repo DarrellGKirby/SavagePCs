@@ -1,0 +1,24 @@
+img {
+    width: 32px;
+    height: 32px;
+}
+
+mat-card {
+    width: 150px;
+}
+
+mat-card-content {
+    align-items: right;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 4px;
+}
+
+b {
+    color: gray;
+}
