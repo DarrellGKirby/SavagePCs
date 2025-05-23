@@ -3,10 +3,11 @@ import { ActivatedRoute } from '@angular/router';
 import { CharactersService } from '../../services/characters.service';
 import { DescriptionComponent } from "./description/description.component";
 import { AttributesComponent } from "./attributes/attributes.component";
+import { SkillsComponent } from "./skills/skills.component";
 
 @Component({
   selector: 'app-character',
-  imports: [DescriptionComponent, AttributesComponent],
+  imports: [DescriptionComponent, AttributesComponent, SkillsComponent],
   templateUrl: './character.component.html',
   styleUrl: './character.component.css'
 })
