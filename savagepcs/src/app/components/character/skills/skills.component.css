@@ -1,0 +1,43 @@
+img {
+    width: 32px;
+    height: 32px;
+}
+
+mat-card {
+    width: 250px;
+}
+
+mat-card-title {
+    margin-left: 2px;
+    margin-right: 2px;
+}
+
+mat-card-content {
+    align-items: right;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 4px;
+}
+
+.tabbed-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 4px;
+    margin-left: 12px;
+    color: blue;
+}
+
+b {
+    color: gray;
+}
+
+.defaulted {
+    background-color: slategray;
+}

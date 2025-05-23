@@ -4,7 +4,7 @@
         @for (attribute of attributes(); track $index) {
             <div class="flex-container">
                 <b>{{attribute.name}}</b>
-                <img [src]="attribute.die.imagePath">
+                <img [src]="attribute.die.imagePath" matTooltip="{{attribute.die.description}}" matTooltipPosition="after">
             </div>
         }
     </mat-card-content>
