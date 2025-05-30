@@ -5,11 +5,14 @@ img {
 
 mat-card {
     width: 250px;
+    margin-right: 4px;
 }
 
 mat-card-title {
     margin-left: 2px;
     margin-right: 2px;
+    padding-left: 8px;
+    padding-right: 8px;
 }
 
 mat-card-content {

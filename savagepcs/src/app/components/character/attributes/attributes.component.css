@@ -7,6 +7,10 @@ mat-card {
     width: 150px;
 }
 
+mat-card-title {
+    padding-left: 8px;
+}
+
 mat-card-content {
     align-items: right;
 }

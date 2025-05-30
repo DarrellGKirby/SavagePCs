@@ -1,0 +1,17 @@
+mat-card {
+    width: 750px;
+    margin-bottom: 2px;
+}
+
+mat-card-title {
+    padding-left: 8px;
+}
+
+mat-panel-description {
+    font-weight: normal;
+    font-size: small;
+}
+
+.archetype {
+    color: darkred;
+}

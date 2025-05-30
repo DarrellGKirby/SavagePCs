@@ -5,9 +5,14 @@
 
 mat-card {
     width: 300px;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
+    margin-right: 4px;
 }
 
 b {
     color: gray;
+}
+
+mat-card-title {
+    padding-left: 8px;
 }

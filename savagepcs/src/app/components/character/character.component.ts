@@ -4,10 +4,11 @@ import { CharactersService } from '../../services/characters.service';
 import { DescriptionComponent } from "./description/description.component";
 import { AttributesComponent } from "./attributes/attributes.component";
 import { SkillsComponent } from "./skills/skills.component";
+import { HindrancesComponent } from "./hindrances/hindrances.component";
 
 @Component({
   selector: 'app-character',
-  imports: [DescriptionComponent, AttributesComponent, SkillsComponent],
+  imports: [DescriptionComponent, AttributesComponent, SkillsComponent, HindrancesComponent],
   templateUrl: './character.component.html',
   styleUrl: './character.component.css'
 })
