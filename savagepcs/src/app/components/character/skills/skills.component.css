@@ -4,7 +4,7 @@ img {
 }
 
 mat-card {
-    width: 250px;
+    width: 300px;
     margin-right: 4px;
 }
 
@@ -38,9 +38,28 @@ mat-card-content {
 }
 
 b {
-    color: gray;
+    color: black;
 }
 
 .defaulted {
     background-color: slategray;
+}
+
+.namespan {
+    width: 150px;
+}
+
+.bonusspan {
+    width: 25px;
+    cursor: default;
+    border: 1px solid lightgray;
+}
+
+.bonusimage {
+    margin-left: -12px;
+}
+
+.hasconditional {
+    color: black;
+    font-weight: bold;
 }
