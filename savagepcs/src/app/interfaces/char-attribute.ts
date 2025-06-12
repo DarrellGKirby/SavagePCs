@@ -1,3 +1,4 @@
+import { Bonus } from "./bonus";
 import { Die } from "./die";
 
 export interface CharacterAttribute {
@@ -5,4 +6,5 @@ export interface CharacterAttribute {
     name: string;
     abbreviation: string;
     die: Die;
+    penalties: Bonus[];
 }

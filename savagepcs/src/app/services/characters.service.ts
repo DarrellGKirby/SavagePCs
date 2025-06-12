@@ -58,7 +58,8 @@ export class CharactersService {
             description: 'd8',
             value: 8,
             imagePath: 'd8.png'
-          }
+          },
+          penalties: []
         },
         {
           id: 1,
@@ -69,7 +70,8 @@ export class CharactersService {
             description: 'd6',
             value: 6,
             imagePath: 'd6.png'
-          }
+          },
+          penalties: []
         },
         {
           id: 2,
@@ -80,7 +82,15 @@ export class CharactersService {
             description: 'd8',
             value: 8,
             imagePath: 'd8.png'
-          }
+          },
+          penalties: [
+            {
+              source: 'Hindrance: Night Terrors',
+              amount: -1,
+              conditional: false,
+              condition: ''
+            }
+          ]
         },
         {
           id: 3,
@@ -91,7 +101,8 @@ export class CharactersService {
             description: 'd6',
             value: 6,
             imagePath: 'd6.png'
-          }
+          },
+          penalties: []
         },
         {
           id: 4,
@@ -102,7 +113,15 @@ export class CharactersService {
             description: 'd4',
             value: 4,
             imagePath: 'd4.png'
-          }
+          },
+          penalties: [
+            {
+              source: 'Hindrance: Anemic',
+              amount: -2,
+              conditional: true,
+              condition: 'When resisting fatigue'
+            }
+          ]
         }
       ],
       skills: [
@@ -117,7 +136,8 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: []
         },
         {
           name: 'Athletics',
@@ -130,7 +150,8 @@ export class CharactersService {
             value: 4,
             imagePath: 'd4.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: []
         },
         {
           name: 'Battle',
@@ -151,7 +172,8 @@ export class CharactersService {
                 description: 'd6',
                 value: 6,
                 imagePath: 'd6.png'
-              }
+              },
+              penalties: []
             },
             {
               name: 'Naval',
@@ -160,9 +182,11 @@ export class CharactersService {
                 description: 'd6',
                 value: 6,
                 imagePath: 'd6.png'
-              }
+              },
+              penalties: []
             }
-          ]
+          ],
+          penalties: []
         },
         {
           name: 'Boating',
@@ -175,7 +199,8 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: []
         },
         {
           name: 'Common Knowledge',
@@ -196,9 +221,11 @@ export class CharactersService {
                 description: 'd4',
                 value: 4,
                 imagePath: 'd4.png'
-              }
+              },
+              penalties: []
             }
-          ]
+          ],
+          penalties: []
         },
         {
           name: 'Driving',
@@ -211,7 +238,8 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: []
         },
         {
           name: 'Electronics',
@@ -232,7 +260,8 @@ export class CharactersService {
                 description: 'd4',
                 value: 4,
                 imagePath: 'd4.png'
-              }
+              },
+              penalties: []
             },
             {
               name: 'Communications',
@@ -241,7 +270,8 @@ export class CharactersService {
                 description: 'd4',
                 value: 4,
                 imagePath: 'd4.png'
-              }
+              },
+              penalties: []
             },
             {
               name: 'Sensors & Targeting',
@@ -250,9 +280,11 @@ export class CharactersService {
                 description: 'd4',
                 value: 4,
                 imagePath: 'd4.png'
-              }
+              },
+              penalties: []
             }
-          ]
+          ],
+          penalties: []
         },
         {
           name: 'Faith',
@@ -265,7 +297,8 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: []
         },
         {
           name: 'Fighting',
@@ -286,9 +319,11 @@ export class CharactersService {
                 description: 'd4',
                 value: 4,
                 imagePath: 'd4.png'
-              }
+              },
+              penalties: []
             }
-          ]
+          ],
+          penalties: []
         },
         {
           name: 'Focus',
@@ -301,7 +336,8 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: []
         },
         {
           name: 'Gambling',
@@ -314,7 +350,8 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: []
         },
         {
           name: 'Hacking',
@@ -327,7 +364,8 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: []
         },
         {
           name: 'Healing',
@@ -340,7 +378,8 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: []
         },
         {
           name: 'Intimidation',
@@ -353,7 +392,8 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: []
         },
         {
           name: 'Language',
@@ -366,7 +406,8 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: []
         },
         {
           name: 'Notice',
@@ -379,7 +420,8 @@ export class CharactersService {
             value: 4,
             imagePath: 'd4.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: []
         },
         {
           name: 'Occult',
@@ -392,7 +434,8 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: []
         },
         {
           name: 'Performance',
@@ -405,7 +448,8 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: []
         },
         {
           name: 'Persuasion',
@@ -426,9 +470,11 @@ export class CharactersService {
                 description: 'd8',
                 value: 8,
                 imagePath: 'd8.png'
-              }
+              },
+              penalties: []
             }
-          ]
+          ],
+          penalties: []
         },
         {
           name: 'Piloting',
@@ -441,7 +487,8 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: []
         },
         {
           name: 'Psionics',
@@ -454,7 +501,8 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: []
         },
         {
           name: 'Repair',
@@ -475,9 +523,11 @@ export class CharactersService {
                 description: 'd4',
                 value: 4,
                 imagePath: 'd4.png'
-              }
+              },
+              penalties: []
             }
-          ]
+          ],
+          penalties: []
         },
         {
           name: 'Research',
@@ -490,7 +540,8 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: []
         },
         {
           name: 'Riding',
@@ -503,7 +554,8 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: []
         },
         {
           name: 'Science',
@@ -524,9 +576,11 @@ export class CharactersService {
                 description: 'd4',
                 value: 4,
                 imagePath: 'd4.png'
-              }
+              },
+              penalties: []
             }
-          ]
+          ],
+          penalties: []
         },
         {
           name: 'Shooting',
@@ -547,9 +601,11 @@ export class CharactersService {
                 description: 'd8',
                 value: 8,
                 imagePath: 'd8.png'
-              }
+              },
+              penalties: []
             }
-          ]
+          ],
+          penalties: []
         },
         {
           name: 'Stealth',
@@ -562,7 +618,8 @@ export class CharactersService {
             value: 4,
             imagePath: 'd4.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: []
         },
         {
           name: 'Survival',
@@ -575,7 +632,8 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: []
         },
         {
           name: 'Taunt',
@@ -588,7 +646,8 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: []
         },
         {
           name: 'Thievery',
@@ -601,7 +660,8 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: []
         }
       ],
       hindrances: [
@@ -673,7 +733,15 @@ export class CharactersService {
             description: 'd8',
             value: 8,
             imagePath: 'd8.png'
-          }
+          },
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         },
         {
           id: 1,
@@ -684,7 +752,15 @@ export class CharactersService {
             description: 'd6',
             value: 6,
             imagePath: 'd6.png'
-          }
+          },
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         },
         {
           id: 2,
@@ -695,7 +771,15 @@ export class CharactersService {
             description: 'd6',
             value: 6,
             imagePath: 'd6.png'
-          }
+          },
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         },
         {
           id: 3,
@@ -706,7 +790,15 @@ export class CharactersService {
             description: 'd6',
             value: 6,
             imagePath: 'd6.png'
-          }
+          },
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         },
         {
           id: 4,
@@ -717,7 +809,15 @@ export class CharactersService {
             description: 'd6',
             value: 6,
             imagePath: 'd6.png'
-          }
+          },
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         }
       ],
       skills: [
@@ -732,7 +832,15 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         },
         {
           name: 'Athletics',
@@ -745,7 +853,15 @@ export class CharactersService {
             value: 4,
             imagePath: 'd4.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         },
         {
           name: 'Battle',
@@ -758,7 +874,15 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         },
         {
           name: 'Boating',
@@ -771,7 +895,15 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         },
         {
           name: 'Common Knowledge',
@@ -784,7 +916,15 @@ export class CharactersService {
             value: 4,
             imagePath: 'd4.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         },
         {
           name: 'Driving',
@@ -797,7 +937,15 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         },
         {
           name: 'Electronics',
@@ -818,7 +966,23 @@ export class CharactersService {
                 description: 'd6',
                 value: 6,
                 imagePath: 'd6.png'
-              }
+              },
+              penalties: [
+                {
+                  source: 'Hindrance: Phobia [Medical Satations]',
+                  amount: -2,
+                  conditional: true,
+                  condition: 'whithin sight of source'
+                }
+              ]
+            }
+          ],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
             }
           ]
         },
@@ -833,7 +997,15 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         },
         {
           name: 'Fighting',
@@ -854,7 +1026,23 @@ export class CharactersService {
                 description: 'd4',
                 value: 4,
                 imagePath: 'd4.png'
-              }
+              },
+              penalties: [
+                {
+                  source: 'Hindrance: Phobia [Medical Satations]',
+                  amount: -2,
+                  conditional: true,
+                  condition: 'whithin sight of source'
+                }
+              ]
+            }
+          ],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
             }
           ]
         },
@@ -869,7 +1057,15 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         },
         {
           name: 'Gambling',
@@ -882,7 +1078,15 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         },
         {
           name: 'Hacking',
@@ -895,7 +1099,15 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         },
         {
           name: 'Healing',
@@ -908,7 +1120,15 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         },
         {
           name: 'Intimidation',
@@ -921,7 +1141,15 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         },
         {
           name: 'Language',
@@ -934,7 +1162,15 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         },
         {
           name: 'Notice',
@@ -955,7 +1191,23 @@ export class CharactersService {
                 description: 'd4',
                 value: 4,
                 imagePath: 'd4.png'
-              }
+              },
+              penalties: [
+                {
+                  source: 'Hindrance: Phobia [Medical Satations]',
+                  amount: -2,
+                  conditional: true,
+                  condition: 'whithin sight of source'
+                }
+              ]
+            }
+          ],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
             }
           ]
         },
@@ -970,7 +1222,15 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         },
         {
           name: 'Performance',
@@ -983,7 +1243,15 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         },
         {
           name: 'Persuasion',
@@ -996,7 +1264,27 @@ export class CharactersService {
             value: 4,
             imagePath: 'd4.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Outsider',
+              amount: -2,
+              conditional: true,
+              condition: 'when trying to influence those who are not her kind'
+            },
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            },
+            {
+              source: "Hindrance: Rebellious",
+              amount: -2,
+              conditional: true,
+              condition: 'dealing with authority figures'
+            }
+          ]
         },
         {
           name: 'Piloting',
@@ -1009,7 +1297,15 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         },
         {
           name: 'Psionics',
@@ -1022,7 +1318,15 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         },
         {
           name: 'Repair',
@@ -1043,7 +1347,23 @@ export class CharactersService {
                 description: 'd6',
                 value: 6,
                 imagePath: 'd6.png'
-              }
+              },
+              penalties: [
+                {
+                  source: 'Hindrance: Phobia [Medical Satations]',
+                  amount: -2,
+                  conditional: true,
+                  condition: 'whithin sight of source'
+                }
+              ]
+            }
+          ],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
             }
           ]
         },
@@ -1058,7 +1378,15 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         },
         {
           name: 'Riding',
@@ -1071,7 +1399,15 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         },
         {
           name: 'Science',
@@ -1084,7 +1420,15 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         },
         {
           name: 'Shooting',
@@ -1105,7 +1449,23 @@ export class CharactersService {
                 description: 'd8',
                 value: 8,
                 imagePath: 'd8.png'
-              }
+              },
+              penalties: [
+                {
+                  source: 'Hindrance: Phobia [Medical Satations]',
+                  amount: -2,
+                  conditional: true,
+                  condition: 'whithin sight of source'
+                }
+              ]
+            }
+          ],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
             }
           ]
         },
@@ -1120,7 +1480,15 @@ export class CharactersService {
             value: 6,
             imagePath: 'd6.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         },
         {
           name: 'Survival',
@@ -1141,7 +1509,15 @@ export class CharactersService {
                 description: 'd4',
                 value: 4,
                 imagePath: 'd4.png'
-              }
+              },
+              penalties: [
+                {
+                  source: 'Hindrance: Phobia [Medical Satations]',
+                  amount: -2,
+                  conditional: true,
+                  condition: 'whithin sight of source'
+                }
+              ]
             },
             {
               name: 'The Verdance',
@@ -1150,7 +1526,23 @@ export class CharactersService {
                 description: 'd4',
                 value: 4,
                 imagePath: 'd4.png'
-              }
+              },
+              penalties: [
+                {
+                  source: 'Hindrance: Phobia [Medical Satations]',
+                  amount: -2,
+                  conditional: true,
+                  condition: 'whithin sight of source'
+                }
+              ]
+            }
+          ],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
             }
           ]
         },
@@ -1165,7 +1557,15 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         },
         {
           name: 'Thievery',
@@ -1178,7 +1578,15 @@ export class CharactersService {
             value: 2,
             imagePath: 'd4-2.png'
           },
-          specializations: []
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Phobia [Medical Satations]',
+              amount: -2,
+              conditional: true,
+              condition: 'whithin sight of source'
+            }
+          ]
         }
       ],
       hindrances: [

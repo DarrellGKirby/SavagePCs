@@ -5,6 +5,12 @@
             <div class="flex-container">
                 <b>{{attribute.name}}</b>
                 <img [src]="attribute.die.imagePath" matTooltip="{{attribute.die.description}}" matTooltipPosition="after">
+                <span matTooltip="{{getConditions(attribute.penalties)}}" class="bonusspan">
+                    {{addBonuses(attribute.penalties)}}
+                    @if (hasConditional(attribute.penalties)) {
+                        <span class="hasconditional">*</span>
+                    }
+                </span>
             </div>
         }
     </mat-card-content>

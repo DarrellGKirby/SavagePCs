@@ -4,7 +4,7 @@ img {
 }
 
 mat-card {
-    width: 150px;
+    width: 175px;
 }
 
 mat-card-title {
@@ -25,4 +25,16 @@ mat-card-content {
 
 b {
     color: gray;
+    width: 65px;
+}
+
+.bonusspan {
+    width: 25px;
+    cursor: default;
+    border: 1px solid lightgray;
+}
+
+.hasconditional {
+    color: black;
+    font-weight: bold;
 }
