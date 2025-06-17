@@ -16,7 +16,8 @@ export class CharactersService {
     },
     attributes: [],
     skills: [],
-    hindrances: []
+    hindrances: [],
+    edges: []
   }
 
   pcList = signal<PCMenuItem[]>([]);
@@ -703,7 +704,7 @@ export class CharactersService {
           ],
           shortDescription: 'Suffers a level of Fatigue for 25 hours after exiting slipstream.'
         },
-              {
+        {
           name: 'Anemic',
           subName: '',
           fromArchetype: false,
@@ -713,6 +714,39 @@ export class CharactersService {
             'Anemic characters are particularly susceptible to sickness, disease, environmental effects, and fatigue. They subtract 2 from Vigor rolls made to resist Fatigue (see Hazards, starting on page 125).'
           ],
           shortDescription: '−2 Vigor when resisting Fatigue.'
+        }
+      ],
+      edges: [
+        {
+          name: 'Linguist',
+          purchase: 'Free',
+          fromArchetype: false,
+          source: 'Core, p. 50',
+          description: [
+            'This world-traveler has an ear for languages.  She begins play knowing half her Smarts die type in different Language skills of her choice at d6 (see the Language skill on page 31).'
+          ],
+          shortDescription: 'Character has d6 in languages equal to half her Smarts die.'
+        },
+        {
+          name: 'Common Bond',
+          purchase: 'Human',
+          fromArchetype: false,
+          source: 'Core, p. 50',
+          description: [
+            'Selfless heroes and determined leaders know their greatest strength often comes from their companions, and are willing to give some of their own fortune, fate, or luck to support them.',
+            'A character with this Edge may freely give her Bennies to any other character she can communicate with. The player should explain what form this takes, from a quick shout of encouragement to a welcome pat on the back.'
+          ],
+          shortDescription: 'The hero may freely give her Bennies to others.'
+        },
+        {
+          name: 'Command',
+          purchase: '',
+          fromArchetype: true,
+          source: 'Core, p. 45',
+          description: [
+            'Command is the basic ability to give clear instructions and support to allies in the thick of battle. Extras in Command Range add +1 to their Spirit rolls when attempting to recover from being Shaken and Vigor when attempting to recover from being Stunned.'
+          ],
+          shortDescription: '+1 to Extras’ Shaken or Stunned recovery rolls.'
         }
       ]
     },
@@ -1638,6 +1672,32 @@ export class CharactersService {
             'As a Major Hindrance, Support rolls to aid the distrustful individual are made at −2.'
           ],
           shortDescription: 'Distrusts most people.'
+        }
+      ],
+      edges: [
+        {
+          name: 'Linguist',
+          purchase: 'Free',
+          fromArchetype: false,
+          source: 'Core, p. 50',
+          description: [
+            'This world-traveler has an ear for languages.  She begins play knowing half her Smarts die type in different Language skills of her choice at d6 (see the Language skill on page 31).'
+          ],
+          shortDescription: 'Character has d6 in languages equal to half her Smarts die.'
+        },
+        {
+          name: 'McGyver',
+          purchase: 'Human',
+          fromArchetype: false,
+          source: 'Core, p. 49',
+          description: [
+            'A McGyver can improvise a device from common resources when the need arises.  Given a few simple items, he can make a Repair roll to craft improvised weapons, explosives, or tools, that last until used or the end of the encounter (GM’s call). This takes one entire turn, and he can’t move or take any other actions while constructing the device.',
+            'Failure means the device isn’t ready. A Critical Failure means he doesn’t have the right materials and can’t create the device this encounter.',
+            'Success creates a minor explosive (2d4 explosive in a Small Blast Template), a one shot projectile weapon like a “zip gun” (Range 5/10/20, Damage 2d6), rickety raft, electrical source, etc.',
+            'A raise creates a larger explosive (2d6 in a Medium Blast Template or 2d4 in a Large), a better ranged weapon (five shots, 2d8 damage, Range 10/20/40), a more stable raft, a more powerful battery, etc.',
+            'The quality or power of the creation is completely up to the Game Master, but creativity should be rewarded, particularly in the most dire and dramatic situations.'
+          ],
+          shortDescription: 'Quickly create improvised devices from scraps.'
         }
       ]
     }
