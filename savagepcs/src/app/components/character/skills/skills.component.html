@@ -19,14 +19,7 @@
             }
             @for (specialization of skill.specializations; track $index) {
                 <div class="tabbed-container">
-                    <span class="namespan">{{specialization.name}}</span>
-                    <img [src]="specialization.die.imagePath" matTooltip="{{specialization.die.description}}" matTooltipPosition="after" class="bonusimage">
-                    <span matTooltip="{{getConditions(skill.penalties)}}" class="bonusspan">
-                        {{addBonuses(skill.penalties)}}
-                        @if (hasConditional(skill.penalties)) {
-                            <span>*</span>
-                        }
-                    </span>
+                    <span class="namespan">{{specialization}}</span>
                 </div>
             }
         }

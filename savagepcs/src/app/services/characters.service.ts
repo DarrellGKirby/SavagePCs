@@ -67,10 +67,10 @@ export class CharactersService {
           name: 'Smarts',
           abbreviation: 'Sm',
           die: {
-            id: 2,
-            description: 'd6',
-            value: 6,
-            imagePath: 'd6.png'
+            id: 3,
+            description: 'd8',
+            value: 8,
+            imagePath: 'd8.png'
           },
           penalties: []
         },
@@ -129,15 +129,15 @@ export class CharactersService {
         {
           name: 'Academics',
           attribute: 'Smarts',
-          proficient: false,
+          proficient: true,
           defaultDie: 0,
           die: {
-            id: 0,
-            description: 'd4-2',
-            value: 2,
-            imagePath: 'd4-2.png'
+            id: 2,
+            description: 'd6',
+            value: 6,
+            imagePath: 'd6.png'
           },
-          specializations: [],
+          specializations: ['Applied Theory'],
           penalties: []
         },
         {
@@ -165,28 +165,7 @@ export class CharactersService {
             value: 6,
             imagePath: 'd6.png'
           },
-          specializations: [
-            {
-              name: 'Land',
-              die: {
-                id: 2,
-                description: 'd6',
-                value: 6,
-                imagePath: 'd6.png'
-              },
-              penalties: []
-            },
-            {
-              name: 'Naval',
-              die: {
-                id: 2,
-                description: 'd6',
-                value: 6,
-                imagePath: 'd6.png'
-              },
-              penalties: []
-            }
-          ],
+          specializations: ['Naval', 'Land'],
           penalties: []
         },
         {
@@ -209,23 +188,12 @@ export class CharactersService {
           proficient: true,
           defaultDie: 1,
           die: {
-            id: 2,
-            description: 'd6',
-            value: 6,
-            imagePath: 'd6.png'
+            id: 1,
+            description: 'd4',
+            value: 4,
+            imagePath: 'd4.png'
           },
-          specializations: [
-            {
-              name: 'Navigation',
-              die: {
-                id: 1,
-                description: 'd4',
-                value: 4,
-                imagePath: 'd4.png'
-              },
-              penalties: []
-            }
-          ],
+          specializations: [],
           penalties: []
         },
         {
@@ -248,43 +216,12 @@ export class CharactersService {
           proficient: true,
           defaultDie: 0,
           die: {
-            id: 1,
-            description: 'd4',
-            value: 4,
-            imagePath: 'd4.png'
+            id: 2,
+            description: 'd6',
+            value: 6,
+            imagePath: 'd6.png'
           },
-          specializations: [
-            {
-              name: 'Astrogation',
-              die: {
-                id: 1,
-                description: 'd4',
-                value: 4,
-                imagePath: 'd4.png'
-              },
-              penalties: []
-            },
-            {
-              name: 'Communications',
-              die: {
-                id: 1,
-                description: 'd4',
-                value: 4,
-                imagePath: 'd4.png'
-              },
-              penalties: []
-            },
-            {
-              name: 'Sensors & Targeting',
-              die: {
-                id: 1,
-                description: 'd4',
-                value: 4,
-                imagePath: 'd4.png'
-              },
-              penalties: []
-            }
-          ],
+          specializations: ['Sensors & Comms', 'Vehicle Systems'],
           penalties: []
         },
         {
@@ -312,18 +249,7 @@ export class CharactersService {
             value: 4,
             imagePath: 'd4.png'
           },
-          specializations: [
-            {
-              name: 'Brawling',
-              die: {
-                id: 1,
-                description: 'd4',
-                value: 4,
-                imagePath: 'd4.png'
-              },
-              penalties: []
-            }
-          ],
+          specializations: ['Martial Arts'],
           penalties: []
         },
         {
@@ -399,15 +325,15 @@ export class CharactersService {
         {
           name: 'Language',
           attribute: 'Smarts',
-          proficient: false,
+          proficient: true,
           defaultDie: 0,
           die: {
-            id: 0,
-            description: 'd4-2',
-            value: 2,
-            imagePath: 'd4-2.png'
+            id: 2,
+            description: 'd6',
+            value: 6,
+            imagePath: 'd6.png'
           },
-          specializations: [],
+          specializations: ['Terran Standard', 'Savannat', 'Pacasian', 'Variksche'],
           penalties: []
         },
         {
@@ -463,18 +389,7 @@ export class CharactersService {
             value: 8,
             imagePath: 'd8.png'
           },
-          specializations: [
-            {
-              name: 'Leadership',
-              die: {
-                id: 3,
-                description: 'd8',
-                value: 8,
-                imagePath: 'd8.png'
-              },
-              penalties: []
-            }
-          ],
+          specializations: ['Leadership'],
           penalties: []
         },
         {
@@ -516,18 +431,7 @@ export class CharactersService {
             value: 4,
             imagePath: 'd4.png'
           },
-          specializations: [
-            {
-              name: 'Electronics',
-              die: {
-                id: 1,
-                description: 'd4',
-                value: 4,
-                imagePath: 'd4.png'
-              },
-              penalties: []
-            }
-          ],
+          specializations: ['Starships'],
           penalties: []
         },
         {
@@ -569,18 +473,7 @@ export class CharactersService {
             value: 4,
             imagePath: 'd4.png'
           },
-          specializations: [
-            {
-              name: 'Astronomy',
-              die: {
-                id: 1,
-                description: 'd4',
-                value: 4,
-                imagePath: 'd4.png'
-              },
-              penalties: []
-            }
-          ],
+          specializations: ['Physics'],
           penalties: []
         },
         {
@@ -589,23 +482,12 @@ export class CharactersService {
           proficient: true,
           defaultDie: 0,
           die: {
-            id: 1,
-            description: 'd4',
-            value: 4,
-            imagePath: 'd4.png'
+            id: 2,
+            description: 'd6',
+            value: 6,
+            imagePath: 'd6.png'
           },
-          specializations: [
-            {
-              name: 'Personal Guns',
-              die: {
-                id: 3,
-                description: 'd8',
-                value: 8,
-                imagePath: 'd8.png'
-              },
-              penalties: []
-            }
-          ],
+          specializations: ['Personal Guns'],
           penalties: []
         },
         {
@@ -723,9 +605,20 @@ export class CharactersService {
           fromArchetype: false,
           source: 'Core, p. 50',
           description: [
-            'This world-traveler has an ear for languages.  She begins play knowing half her Smarts die type in different Language skills of her choice at d6 (see the Language skill on page 31).'
+            'This world-traveler has an ear for languages.  She begins play knowing Terran Standard and one additional language as their home language.  She gets an additional language for every die above d4 in Smarts.'
           ],
-          shortDescription: 'Character has d6 in languages equal to half her Smarts die.'
+          shortDescription: 'Character starts with 2 languages plus additional languages based on Smarts.'
+        },
+        {
+          name: 'Unarmored Hero',
+          purchase: 'Free',
+          fromArchetype: false,
+          source: 'Core, p. 141',
+          description: [
+            'Pulp action tales often feature heroes with little or no armor defeating far more heavily armored adversaries.',
+            'In these settings, if a Wild Card chooses not to wear any armor (ignoring shields), he adds +2 bonus to his Soak rolls!'
+          ],
+          shortDescription: '+2 to Soak rolls when wearing no armor.'
         },
         {
           name: 'Common Bond',
@@ -987,30 +880,12 @@ export class CharactersService {
           proficient: true,
           defaultDie: 0,
           die: {
-            id: 1,
-            description: 'd4',
-            value: 4,
-            imagePath: 'd4.png'
+            id: 2,
+            description: 'd6',
+            value: 6,
+            imagePath: 'd6.png'
           },
-          specializations: [
-            {
-              name: 'Bots',
-              die: {
-                id: 2,
-                description: 'd6',
-                value: 6,
-                imagePath: 'd6.png'
-              },
-              penalties: [
-                {
-                  source: 'Hindrance: Phobia [Medical Satations]',
-                  amount: -2,
-                  conditional: true,
-                  condition: 'whithin sight of source'
-                }
-              ]
-            }
-          ],
+          specializations: ['Vehicle Systems'],
           penalties: [
             {
               source: 'Hindrance: Phobia [Medical Satations]',
@@ -1052,25 +927,7 @@ export class CharactersService {
             value: 4,
             imagePath: 'd4.png'
           },
-          specializations: [
-            {
-              name: 'Clubs',
-              die: {
-                id: 1,
-                description: 'd4',
-                value: 4,
-                imagePath: 'd4.png'
-              },
-              penalties: [
-                {
-                  source: 'Hindrance: Phobia [Medical Satations]',
-                  amount: -2,
-                  conditional: true,
-                  condition: 'whithin sight of source'
-                }
-              ]
-            }
-          ],
+          specializations: ['Clubs'],
           penalties: [
             {
               source: 'Hindrance: Phobia [Medical Satations]',
@@ -1188,15 +1045,15 @@ export class CharactersService {
         {
           name: 'Language',
           attribute: 'Smarts',
-          proficient: false,
+          proficient: true,
           defaultDie: 0,
           die: {
-            id: 0,
-            description: 'd4-2',
-            value: 2,
-            imagePath: 'd4-2.png'
+            id: 2,
+            description: 'd6',
+            value: 6,
+            imagePath: 'd6.png'
           },
-          specializations: [],
+          specializations: ['Terran Standard'],
           penalties: [
             {
               source: 'Hindrance: Phobia [Medical Satations]',
@@ -1217,25 +1074,7 @@ export class CharactersService {
             value: 8,
             imagePath: 'd8.png'
           },
-          specializations: [
-            {
-              name: 'Awareness',
-              die: {
-                id: 1,
-                description: 'd4',
-                value: 4,
-                imagePath: 'd4.png'
-              },
-              penalties: [
-                {
-                  source: 'Hindrance: Phobia [Medical Satations]',
-                  amount: -2,
-                  conditional: true,
-                  condition: 'whithin sight of source'
-                }
-              ]
-            }
-          ],
+          specializations: ['Awareness'],
           penalties: [
             {
               source: 'Hindrance: Phobia [Medical Satations]',
@@ -1373,25 +1212,7 @@ export class CharactersService {
             value: 6,
             imagePath: 'd6.png'
           },
-          specializations: [
-            {
-              name: 'Electronic Devices',
-              die: {
-                id: 2,
-                description: 'd6',
-                value: 6,
-                imagePath: 'd6.png'
-              },
-              penalties: [
-                {
-                  source: 'Hindrance: Phobia [Medical Satations]',
-                  amount: -2,
-                  conditional: true,
-                  condition: 'whithin sight of source'
-                }
-              ]
-            }
-          ],
+          specializations: ['Gear'],
           penalties: [
             {
               source: 'Hindrance: Phobia [Medical Satations]',
@@ -1470,30 +1291,12 @@ export class CharactersService {
           proficient: true,
           defaultDie: 0,
           die: {
-            id: 1,
-            description: 'd4',
-            value: 4,
-            imagePath: 'd4.png'
+            id: 3,
+            description: 'd8',
+            value: 8,
+            imagePath: 'd8.png'
           },
-          specializations: [
-            {
-              name: 'Rifles',
-              die: {
-                id: 3,
-                description: 'd8',
-                value: 8,
-                imagePath: 'd8.png'
-              },
-              penalties: [
-                {
-                  source: 'Hindrance: Phobia [Medical Satations]',
-                  amount: -2,
-                  conditional: true,
-                  condition: 'whithin sight of source'
-                }
-              ]
-            }
-          ],
+          specializations: ['Rifles'],
           penalties: [
             {
               source: 'Hindrance: Phobia [Medical Satations]',
@@ -1530,47 +1333,12 @@ export class CharactersService {
           proficient: true,
           defaultDie: 0,
           die: {
-            id: 1,
-            description: 'd4',
-            value: 4,
-            imagePath: 'd4.png'
+            id: 2,
+            description: 'd6',
+            value: 6,
+            imagePath: 'd6.png'
           },
-          specializations: [
-            {
-              name: 'Outlands',
-              die: {
-                id: 1,
-                description: 'd4',
-                value: 4,
-                imagePath: 'd4.png'
-              },
-              penalties: [
-                {
-                  source: 'Hindrance: Phobia [Medical Satations]',
-                  amount: -2,
-                  conditional: true,
-                  condition: 'whithin sight of source'
-                }
-              ]
-            },
-            {
-              name: 'The Verdance',
-              die: {
-                id: 1,
-                description: 'd4',
-                value: 4,
-                imagePath: 'd4.png'
-              },
-              penalties: [
-                {
-                  source: 'Hindrance: Phobia [Medical Satations]',
-                  amount: -2,
-                  conditional: true,
-                  condition: 'whithin sight of source'
-                }
-              ]
-            }
-          ],
+          specializations: ['Outlands', 'The Verdance'],
           penalties: [
             {
               source: 'Hindrance: Phobia [Medical Satations]',
@@ -1681,9 +1449,20 @@ export class CharactersService {
           fromArchetype: false,
           source: 'Core, p. 50',
           description: [
-            'This world-traveler has an ear for languages.  She begins play knowing half her Smarts die type in different Language skills of her choice at d6 (see the Language skill on page 31).'
+            'This world-traveler has an ear for languages.  She begins play knowing Terran Standard and one additional language as their home language.  She gets an additional language for every die above d4 in Smarts.'
           ],
-          shortDescription: 'Character has d6 in languages equal to half her Smarts die.'
+          shortDescription: 'Character starts with 2 languages plus additional languages based on Smarts.'
+        },
+        {
+          name: 'Unarmored Hero',
+          purchase: 'Free',
+          fromArchetype: false,
+          source: 'Core, p. 141',
+          description: [
+            'Pulp action tales often feature heroes with little or no armor defeating far more heavily armored adversaries.',
+            'In these settings, if a Wild Card chooses not to wear any armor (ignoring shields), he adds +2 bonus to his Soak rolls!'
+          ],
+          shortDescription: '+2 to Soak rolls when wearing no armor.'
         },
         {
           name: 'McGyver',
