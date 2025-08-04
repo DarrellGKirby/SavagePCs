@@ -1,0 +1,11 @@
+<mat-card>
+    <mat-card-title class="title-row">
+        <span>Gear</span>
+        <span class="credits">[Credits: {{credits()}}]</span>
+    </mat-card-title>
+    <mat-card-content>
+        @for (item of gear(); track $index) {
+            <div>{{item.name}}</div>
+        }
+    </mat-card-content>
+</mat-card>
