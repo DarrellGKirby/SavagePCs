@@ -6,10 +6,11 @@ import { AttributesComponent } from "./attributes/attributes.component";
 import { SkillsComponent } from "./skills/skills.component";
 import { HindrancesComponent } from "./hindrances/hindrances.component";
 import { EdgesComponent } from "./edges/edges.component";
+import { GearComponent } from "./gear/gear.component";
 
 @Component({
   selector: 'app-character',
-  imports: [DescriptionComponent, AttributesComponent, SkillsComponent, HindrancesComponent, EdgesComponent],
+  imports: [DescriptionComponent, AttributesComponent, SkillsComponent, HindrancesComponent, EdgesComponent, GearComponent],
   templateUrl: './character.component.html',
   styleUrl: './character.component.css'
 })

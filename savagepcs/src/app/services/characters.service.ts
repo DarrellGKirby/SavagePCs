@@ -17,7 +17,9 @@ export class CharactersService {
     attributes: [],
     skills: [],
     hindrances: [],
-    edges: []
+    edges: [],
+    credits: 0,
+    gear: []
   }
 
   pcList = signal<PCMenuItem[]>([]);
@@ -640,6 +642,108 @@ export class CharactersService {
             'Command is the basic ability to give clear instructions and support to allies in the thick of battle. Extras in Command Range add +1 to their Spirit rolls when attempting to recover from being Shaken and Vigor when attempting to recover from being Stunned.'
           ],
           shortDescription: '+1 to Extras’ Shaken or Stunned recovery rolls.'
+        }
+      ],
+      credits: 90,
+      gear: [
+        {
+          category: 'Adventuring Gear',
+          type: 'Clothing',
+          name: 'Casual Clothing',
+          weight : 2,
+          cost: 20,
+          description: '',
+          provided: true
+        },
+        {
+          category: 'Cyberware',
+          type: 'Body',
+          name: 'Synaptic Anchor',
+          weight : 0,
+          cost: 1000,
+          description: 'This core implant enables wireless access to the Mnemoscape. It is the foundational implant for all Neural Interface-based cyberware. Connection is a limited free action.',
+          provided: true
+        },
+        {
+          category: 'Adventuring Gear',
+          type: 'Electronics',
+          name: 'Personal Data Device',
+          weight : 0,
+          cost: 500,
+          description: 'PDDs are upgraded versions of modern mobile phones with a month-long duration on a single charge. PDDs grant a free reroll on Common Knowledge rolls when used to gather information from the CoreNet.',
+          provided: true
+        },
+        {
+          category: 'Adventuring Gear',
+          type: 'Clothing',
+          name: 'Official Uniform',
+          weight : 3,
+          cost: 50,
+          description: '',
+          provided: true
+        },
+        {
+          category: 'Adventuring Gear',
+          type: 'Clothing',
+          name: 'Dress Uniform',
+          weight : 3,
+          cost: 200,
+          description: '',
+          provided: false
+        },
+        {
+          category: 'Adventuring Gear',
+          type: 'Clothing',
+          name: 'Magnetic Boots',
+          weight : 4,
+          cost: 100,
+          description: 'Magnets in these heavy boots allow characters to walk on any metal surface at half Pace (they may not run).',
+          provided: false
+        },
+        {
+          category: 'Adventuring Gear',
+          type: 'Electronics',
+          name: 'Language Translator',
+          weight : 1,
+          cost: 250,
+          description: 'Translates all known, sentient languages at d10 for common tongues and d6 for languages with lesser databases. Does not work for glyphs or forbidden languages.',
+          provided: false
+        },
+        {
+          category: 'Adventuring Gear',
+          type: 'Basic Gear',
+          name: 'Flashlight',
+          weight : 1,
+          cost: 20,
+          description: 'Projects a 10” beam.',
+          provided: false
+        },
+        {
+          category: 'Ranged Weapon',
+          type: 'Slugthrower',
+          name: 'Medium Pistol',
+          weight : 2,
+          cost: 250,
+          description: '2d6+1, AP: 2, Shots: 10',
+          provided: false
+        },
+        {
+          category: 'Ranged Weapon',
+          type: 'Slugthrower',
+          name: 'Medium Pistol Ammo',
+          weight : 2,
+          cost: 20,
+          description: '50 rounds',
+          provided: false
+        },
+        {
+          category: 'Ranged Weapon',
+          type: 'Slugthrower',
+          name: 'Medium Pistol Ammo',
+          weight : 2,
+          cost: 20,
+          description: '50 rounds',
+          provided: false
         }
       ]
     },
@@ -1477,6 +1581,18 @@ export class CharactersService {
             'The quality or power of the creation is completely up to the Game Master, but creativity should be rewarded, particularly in the most dire and dramatic situations.'
           ],
           shortDescription: 'Quickly create improvised devices from scraps.'
+        }
+      ],
+      credits: 0,
+      gear: [
+        {
+          category: 'Adventuring Gear',
+          type: 'Clothing',
+          name: 'Casual Clothing',
+          weight : 2,
+          cost: 20,
+          description: '',
+          provided: true
         }
       ]
     }
