@@ -1,0 +1,19 @@
+<mat-card>
+    <mat-card-title>Derived Statistics</mat-card-title>
+    <mat-card-content>
+        <div class="row-container">
+            <div>
+                <b>Pace: </b>
+                <span>{{speed()}}</span>
+            </div>
+            <div>
+                <b>Parry: </b>
+                <span>{{2 + (fighting() / 2) }}</span>
+            </div>
+            <div>
+                <b>Toughness: </b>
+                <span>{{2 + (vigor() / 2)}}</span>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

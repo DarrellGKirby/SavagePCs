@@ -3,13 +3,15 @@
     <mat-card-content>
         @for (attribute of attributes(); track $index) {
             <div class="flex-container">
-                <b>{{attribute.name}}</b>
+                <b>
+                    {{attribute.name}}
+                </b>
                 <img [src]="attribute.die.imagePath" matTooltip="{{attribute.die.description}}" matTooltipPosition="after">
-                <span matTooltip="{{getConditions(attribute.penalties)}}" class="bonusspan">
+                <span matTooltip="{{getConditions(attribute.penalties)}}"
+                    class="bonusspan"
+                    [class.conditionalspan]="hasConditional(attribute.penalties)"
+                >
                     {{addBonuses(attribute.penalties)}}
-                    @if (hasConditional(attribute.penalties)) {
-                        <span class="hasconditional">*</span>
-                    }
                 </span>
             </div>
         }

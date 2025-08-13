@@ -14,4 +14,5 @@ export interface Character {
     edges: CharacterEdge[];
     credits: number;
     gear: Equipment[];
+    speed: number;
 }

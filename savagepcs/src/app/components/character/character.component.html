@@ -8,6 +8,13 @@
         <app-skills [skills]="pc().skills"></app-skills>
     </div>
     <div>
+        <app-derived
+            [speed]="pc().speed"
+            [fighting]="fightingValue()"
+            [vigor]="vigorValue()"
+        ></app-derived>
+    </div>
+    <div>
         <app-hindrances [hindrances]="pc().hindrances"></app-hindrances>
         <app-edges [edges]="pc().edges"></app-edges>
     </div>

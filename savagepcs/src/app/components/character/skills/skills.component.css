@@ -4,7 +4,7 @@ img {
 }
 
 mat-card {
-    width: 300px;
+    width: 250px;
     margin-right: 4px;
 }
 
@@ -53,10 +53,15 @@ b {
     width: 25px;
     cursor: default;
     border: 1px solid lightgray;
+    text-align: right;
 }
 
 .bonusimage {
     margin-left: -12px;
+}
+
+.conditionalspan {
+    background-color: darkgoldenrod;
 }
 
 .hasconditional {
