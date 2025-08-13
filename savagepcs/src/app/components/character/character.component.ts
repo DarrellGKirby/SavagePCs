@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CharactersService } from '../../services/characters.service';
 import { DescriptionComponent } from "./description/description.component";
@@ -7,10 +7,11 @@ import { SkillsComponent } from "./skills/skills.component";
 import { HindrancesComponent } from "./hindrances/hindrances.component";
 import { EdgesComponent } from "./edges/edges.component";
 import { GearComponent } from "./gear/gear.component";
+import { DerivedComponent } from "./derived/derived.component";
 
 @Component({
   selector: 'app-character',
-  imports: [DescriptionComponent, AttributesComponent, SkillsComponent, HindrancesComponent, EdgesComponent, GearComponent],
+  imports: [DescriptionComponent, AttributesComponent, SkillsComponent, HindrancesComponent, EdgesComponent, GearComponent, DerivedComponent],
   templateUrl: './character.component.html',
   styleUrl: './character.component.css'
 })
@@ -20,6 +21,12 @@ export class CharacterComponent {
 
   id: number = 0;
   pc = this.pcService.selectedPC;
+  fightingValue = computed(() => {
+    return this.pc().skills.find(s => s.name === 'Fighting')?.die.value ?? 0;
+  });
+  vigorValue = computed(() => {
+    return this.pc().attributes.find(a => a.name === 'Vigor')?.die.value ?? 0;
+  });
 
   ngOnInit() {
     this.id = parseInt(this.route.snapshot.paramMap.get('id')!);

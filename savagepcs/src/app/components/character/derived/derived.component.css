@@ -1,16 +1,11 @@
 mat-card {
-    width: 250px;
-    margin-bottom: 4px;
-    margin-right: 4px;
+    width: 600px;
 }
 
-.title-row {
+.row-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-}
-
-.credits {
-    font-size: small;
+    padding-bottom: 4px;
 }

@@ -7,13 +7,12 @@
         @for (skill of skills(); track $index) {
             @if (skill.proficient || showAll()) {
                 <div class="flex-container" [class]="{'defaulted': skill.defaultDie > 0}">
-                    <span matTooltip="{{skill.attribute}}" matTooltipPosition="after" class="namespan">{{skill.name}}</span>
+                    <span matTooltip="{{skill.attribute}}" matTooltipPosition="after" class="namespan" color="warn">
+                        {{skill.name}}
+                    </span>
                     <img [src]="skill.die.imagePath" matTooltip="{{skill.die.description}}" matTooltipPosition="after">
-                    <span matTooltip="{{getConditions(skill.penalties)}}" class="bonusspan">
+                    <span matTooltip="{{getConditions(skill.penalties)}}" class="bonusspan" [class.conditionalspan]="hasConditional(skill.penalties)">
                         {{addBonuses(skill.penalties)}}
-                        @if (hasConditional(skill.penalties)) {
-                            <span>*</span>
-                        }
                     </span>
                 </div>
             }

@@ -19,7 +19,8 @@ export class CharactersService {
     hindrances: [],
     edges: [],
     credits: 0,
-    gear: []
+    gear: [],
+    speed: 6
   }
 
   pcList = signal<PCMenuItem[]>([]);
@@ -238,7 +239,14 @@ export class CharactersService {
             imagePath: 'd4-2.png'
           },
           specializations: [],
-          penalties: []
+          penalties: [
+            {
+              source: 'Hindrance: Night Terrors',
+              amount: -1,
+              conditional: false,
+              condition: ''
+            }
+          ]
         },
         {
           name: 'Fighting',
@@ -266,7 +274,14 @@ export class CharactersService {
             imagePath: 'd4-2.png'
           },
           specializations: [],
-          penalties: []
+          penalties: [
+            {
+              source: 'Hindrance: Night Terrors',
+              amount: -1,
+              conditional: false,
+              condition: ''
+            }
+          ]
         },
         {
           name: 'Gambling',
@@ -322,7 +337,14 @@ export class CharactersService {
             imagePath: 'd4-2.png'
           },
           specializations: [],
-          penalties: []
+          penalties: [
+            {
+              source: 'Hindrance: Night Terrors',
+              amount: -1,
+              conditional: false,
+              condition: ''
+            }
+          ]
         },
         {
           name: 'Language',
@@ -378,7 +400,14 @@ export class CharactersService {
             imagePath: 'd4-2.png'
           },
           specializations: [],
-          penalties: []
+          penalties: [
+            {
+              source: 'Hindrance: Night Terrors',
+              amount: -1,
+              conditional: false,
+              condition: ''
+            }
+          ]
         },
         {
           name: 'Persuasion',
@@ -392,7 +421,14 @@ export class CharactersService {
             imagePath: 'd8.png'
           },
           specializations: ['Leadership'],
-          penalties: []
+          penalties: [
+            {
+              source: 'Hindrance: Night Terrors',
+              amount: -1,
+              conditional: false,
+              condition: ''
+            }
+          ]
         },
         {
           name: 'Piloting',
@@ -420,7 +456,14 @@ export class CharactersService {
             imagePath: 'd4-2.png'
           },
           specializations: [],
-          penalties: []
+          penalties: [
+            {
+              source: 'Hindrance: Night Terrors',
+              amount: -1,
+              conditional: false,
+              condition: ''
+            }
+          ]
         },
         {
           name: 'Repair',
@@ -745,7 +788,8 @@ export class CharactersService {
           description: '50 rounds',
           provided: false
         }
-      ]
+      ],
+      speed: 6
     },
     {
       id: 2,
@@ -1594,7 +1638,8 @@ export class CharactersService {
           description: '',
           provided: true
         }
-      ]
+      ],
+      speed: 6
     }
   ];
 }
