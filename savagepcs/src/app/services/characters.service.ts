@@ -20,7 +20,8 @@ export class CharactersService {
     edges: [],
     credits: 0,
     gear: [],
-    speed: 6
+    speed: 6,
+    woundsLimit: 3
   }
 
   pcList = signal<PCMenuItem[]>([]);
@@ -789,7 +790,8 @@ export class CharactersService {
           provided: false
         }
       ],
-      speed: 6
+      speed: 6,
+      woundsLimit: 3
     },
     {
       id: 2,
@@ -1639,7 +1641,8 @@ export class CharactersService {
           provided: true
         }
       ],
-      speed: 6
+      speed: 6,
+      woundsLimit: 3
     }
   ];
 }

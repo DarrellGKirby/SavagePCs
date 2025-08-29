@@ -1,0 +1,21 @@
+<mat-card>
+    <mat-card-title>States</mat-card-title>
+    <mat-card-content>
+        <div class="row-container">
+            <div>WOUNDS</div>
+            <div>FATIGUE</div>
+        </div>
+        <div class="row-container">
+            <div>
+                <span class="numberspan">{{currentWound()}}</span>
+                <button mat-flat-button (click)="addWound()" class="penaltybutton badbutton">Add</button>
+                <button mat-flat-button (click)="healWound()" class="penaltybutton goodbutton">Heal</button>
+            </div>
+            <div>
+                <span>{{FATIGUE_LEVEL[currentFatigue()]}}</span>
+                <button mat-flat-button class="penaltybutton badbutton" (click)="addFatigue()">Stress</button>
+                <button mat-flat-button class="penaltybutton goodbutton" (click)="removeFatigue()">Rest</button>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>

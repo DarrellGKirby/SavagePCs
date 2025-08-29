@@ -7,12 +7,7 @@
                     {{attribute.name}}
                 </b>
                 <img [src]="attribute.die.imagePath" matTooltip="{{attribute.die.description}}" matTooltipPosition="after">
-                <span matTooltip="{{getConditions(attribute.penalties)}}"
-                    class="bonusspan"
-                    [class.conditionalspan]="hasConditional(attribute.penalties)"
-                >
-                    {{addBonuses(attribute.penalties)}}
-                </span>
+                <app-bonus [bonuses]="attribute.penalties" [woundsPenalty]="woundsPenalty()" [fatiguePenalty]="fatiguePenalty()"></app-bonus>
             </div>
         }
     </mat-card-content>

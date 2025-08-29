@@ -1,11 +1,11 @@
 <div class="row-container">
     <div>
         <app-description [description]="pc().description"></app-description>
-        <app-attributes [attributes]="pc().attributes"></app-attributes>
+        <app-attributes [attributes]="pc().attributes" [woundsPenalty]="woundsPenalty()" [fatiguePenalty]="fatiguePenalty()"></app-attributes>
         <app-gear [gear]="pc().gear" [credits]="pc().credits"></app-gear>
     </div>
     <div>
-        <app-skills [skills]="pc().skills"></app-skills>
+        <app-skills [skills]="pc().skills" [woundsPenalty]="woundsPenalty()" [fatiguePenalty]="fatiguePenalty()"></app-skills>
     </div>
     <div>
         <app-derived
@@ -13,6 +13,11 @@
             [fighting]="fightingValue()"
             [vigor]="vigorValue()"
         ></app-derived>
+        <app-states
+            [woundsLimit]="pc().woundsLimit"
+            (transmitWoundsPenalty)="setWoundsPenalty($event)"
+            (transmitFatiguePenalty)="setFatiguePenalty($event)"
+        ></app-states>
     </div>
     <div>
         <app-hindrances [hindrances]="pc().hindrances"></app-hindrances>

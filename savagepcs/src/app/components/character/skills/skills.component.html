@@ -11,9 +11,7 @@
                         {{skill.name}}
                     </span>
                     <img [src]="skill.die.imagePath" matTooltip="{{skill.die.description}}" matTooltipPosition="after">
-                    <span matTooltip="{{getConditions(skill.penalties)}}" class="bonusspan" [class.conditionalspan]="hasConditional(skill.penalties)">
-                        {{addBonuses(skill.penalties)}}
-                    </span>
+                    <app-bonus [bonuses]="skill.penalties" [woundsPenalty]="woundsPenalty()" [fatiguePenalty]="fatiguePenalty()"></app-bonus>
                 </div>
             }
             @for (specialization of skill.specializations; track $index) {

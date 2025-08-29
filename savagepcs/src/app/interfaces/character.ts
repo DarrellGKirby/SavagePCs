@@ -15,4 +15,5 @@ export interface Character {
     credits: number;
     gear: Equipment[];
     speed: number;
+    woundsLimit: number;
 }
