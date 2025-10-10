@@ -1,0 +1,11 @@
+.bonusspan {
+    width: 25px;
+    cursor: default;
+    border: 1px solid lightgray;
+    text-align: right;
+    display: block;
+}
+
+.conditionalspan {
+    background-color: darkgoldenrod;
+}

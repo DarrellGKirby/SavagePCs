@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { CharactersService } from '../../services/characters.service';
 import { DescriptionComponent } from "./description/description.component";
@@ -8,10 +8,11 @@ import { HindrancesComponent } from "./hindrances/hindrances.component";
 import { EdgesComponent } from "./edges/edges.component";
 import { GearComponent } from "./gear/gear.component";
 import { DerivedComponent } from "./derived/derived.component";
+import { StatesComponent } from "./states/states.component";
 
 @Component({
   selector: 'app-character',
-  imports: [DescriptionComponent, AttributesComponent, SkillsComponent, HindrancesComponent, EdgesComponent, GearComponent, DerivedComponent],
+  imports: [DescriptionComponent, AttributesComponent, SkillsComponent, HindrancesComponent, EdgesComponent, GearComponent, DerivedComponent, StatesComponent],
   templateUrl: './character.component.html',
   styleUrl: './character.component.css'
 })
@@ -27,9 +28,25 @@ export class CharacterComponent {
   vigorValue = computed(() => {
     return this.pc().attributes.find(a => a.name === 'Vigor')?.die.value ?? 0;
   });
+  woundsPenalty = signal<number>(0);
+  fatiguePenalty = signal<number>(0);
+  distractedPenalty = signal<number>(0);
 
-  ngOnInit() {
+  constructor() {
     this.id = parseInt(this.route.snapshot.paramMap.get('id')!);
     this.pcService.getPC(this.id);
+  }
+
+  setWoundsPenalty(penalty: number) {
+    this.woundsPenalty.set(penalty);
+  }
+
+  setFatiguePenalty(penalty: number) {
+    this.fatiguePenalty.set(penalty);
+  }
+
+  setDistractedPenalty(penalty: number) {
+    console.log('Setting Distracted Penalty: ', penalty);
+    this.distractedPenalty.set(penalty);
   }
 }

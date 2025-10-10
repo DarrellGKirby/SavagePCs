@@ -1,0 +1,35 @@
+mat-card {
+    width: 600px;
+}
+
+.row-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 4px;
+}
+
+.numberspan {
+    width: 25px;
+    cursor: default;
+    border: 1px solid lightgray;
+    text-align: right;
+}
+
+.penaltybutton {
+    height: 20px;
+    border-radius: 4px;
+}
+
+.badbutton {
+    background-color: darkred !important;
+}
+
+.goodbutton {
+    background-color: darkgreen !important;
+}
+
+.penaltysize {
+    width: 31%;
+}
