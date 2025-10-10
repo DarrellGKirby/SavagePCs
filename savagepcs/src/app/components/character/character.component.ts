@@ -30,6 +30,7 @@ export class CharacterComponent {
   });
   woundsPenalty = signal<number>(0);
   fatiguePenalty = signal<number>(0);
+  distractedPenalty = signal<number>(0);
 
   constructor() {
     this.id = parseInt(this.route.snapshot.paramMap.get('id')!);
@@ -42,5 +43,10 @@ export class CharacterComponent {
 
   setFatiguePenalty(penalty: number) {
     this.fatiguePenalty.set(penalty);
+  }
+
+  setDistractedPenalty(penalty: number) {
+    console.log('Setting Distracted Penalty: ', penalty);
+    this.distractedPenalty.set(penalty);
   }
 }

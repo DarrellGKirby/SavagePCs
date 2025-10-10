@@ -22,6 +22,7 @@ export class SkillsComponent {
   skills = input<Skill[]>([]);
   woundsPenalty = input<number>(0);
   fatiguePenalty = input<number>(0);
+  distractedPenalty = input<number>(0);
   showAll = signal<boolean>(true);
 
   checkShowAll(current: boolean) {

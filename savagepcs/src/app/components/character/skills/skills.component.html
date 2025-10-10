@@ -11,7 +11,12 @@
                         {{skill.name}}
                     </span>
                     <img [src]="skill.die.imagePath" matTooltip="{{skill.die.description}}" matTooltipPosition="after">
-                    <app-bonus [bonuses]="skill.penalties" [woundsPenalty]="woundsPenalty()" [fatiguePenalty]="fatiguePenalty()"></app-bonus>
+                    <app-bonus
+                        [bonuses]="skill.penalties"
+                        [woundsPenalty]="woundsPenalty()"
+                        [fatiguePenalty]="fatiguePenalty()"
+                        [distractedPenalty]="distractedPenalty()"
+                    ></app-bonus>
                 </div>
             }
             @for (specialization of skill.specializations; track $index) {

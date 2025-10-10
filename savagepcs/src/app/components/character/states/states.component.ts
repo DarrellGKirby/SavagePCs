@@ -8,7 +8,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
   imports: [
     MatCardModule,
     MatCheckboxModule,
-    MatButtonModule
+    MatButtonModule,
+    MatCheckboxModule
   ],
   templateUrl: './states.component.html',
   styleUrl: './states.component.css'
@@ -16,19 +17,31 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 export class StatesComponent {
   readonly MAX_WOUNDS: number = 3;
   readonly MAX_FATIGUE_LEVEL: number = 2;
-  readonly FATIGUE_LEVEL: string[] = ['Normal', 'Fatigued', 'Exhausted', 'Incapicitated']
+  readonly FATIGUE_LEVEL: string[] = ['Normal', 'Fatigued', 'Exhausted', 'Incapicitated'];
+  distractedPenalty: number = 2;
   woundsLimit = input<number>(this.MAX_WOUNDS);
 
   transmitWoundsPenalty = output<number>();
   transmitFatiguePenalty = output<number>();
+  transmitDistractedPenalty = output<number>();
 
   currentWound = signal<number>(0);
   currentFatigue = signal<number>(0);
+  shaken = signal<boolean>(false);
+  distracted = signal<boolean>(false);
+  vulnerable = signal<boolean>(false);
+  stunned = signal<boolean>(false);
+  incapacitated = signal<boolean>(false);
+  entangled = signal<boolean>(false);
+  bound = signal<boolean>(false);
 
   addWound() {
     let current = this.currentWound();
     if (current <= this.MAX_WOUNDS) {
       this.currentWound.set(++current);
+      this.setShaken(true);
+    } else {
+      this.setIncapacitated(true);
     }
     this.sendWoundsPenalty();
   }
@@ -50,6 +63,9 @@ export class StatesComponent {
     if (current <= this.MAX_FATIGUE_LEVEL) {
       this.currentFatigue.set(++current);
     }
+    if (current > this.MAX_FATIGUE_LEVEL) {
+      this.setIncapacitated(true);
+    }
     this.sendFatiguePenalty();
   }
 
@@ -63,5 +79,37 @@ export class StatesComponent {
 
   sendFatiguePenalty() {
     this.transmitFatiguePenalty.emit(this.currentFatigue() > this.MAX_FATIGUE_LEVEL ? this.MAX_FATIGUE_LEVEL : this.currentFatigue());
+  }
+
+  setShaken(value: boolean) {
+    this.shaken.set(value);
+  }
+
+  setDistracted(value: boolean) {
+    this.distracted.set(value);
+    this.transmitDistractedPenalty.emit(this.distracted() ? this.distractedPenalty : 0);
+  }
+
+  setVulnerable(value: boolean) {
+    this.vulnerable.set(value);
+  }
+
+  setIncapacitated(value: boolean) {
+    this.incapacitated.set(value);
+  }
+
+  setStunned(value: boolean) {
+    this.stunned.set(value);
+  }
+
+  setEntangled(value: boolean) {
+    this.entangled.set(value);
+    this.vulnerable.set(value);
+  }
+
+  setBound(value: boolean) {
+    this.bound.set(value);
+    this.distracted.set(value);
+    this.vulnerable.set(value);
   }
 }

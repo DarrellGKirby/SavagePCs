@@ -18,8 +18,8 @@ mat-card {
 }
 
 .penaltybutton {
-    width: 30px;
     height: 20px;
+    border-radius: 4px;
 }
 
 .badbutton {
@@ -28,4 +28,8 @@ mat-card {
 
 .goodbutton {
     background-color: darkgreen !important;
+}
+
+.penaltysize {
+    width: 31%;
 }

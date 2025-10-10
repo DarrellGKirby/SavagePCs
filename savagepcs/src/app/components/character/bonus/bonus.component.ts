@@ -14,9 +14,13 @@ export class BonusComponent {
   bonuses = input<Bonus[]>([]);
   woundsPenalty = input<number>(0);
   fatiguePenalty = input<number>(0);
+  distractedPenalty = input<number>(0);
 
   totalBonus = computed<number>(() => {
-    return this.bonuses().filter(b => !b.conditional).reduce((acc, curr) => acc + curr.amount, 0) - this.woundsPenalty() - this.fatiguePenalty();
+    return this.bonuses().filter(b => !b.conditional).reduce((acc, curr) => acc + curr.amount, 0)
+      - this.woundsPenalty()
+      - this.fatiguePenalty()
+      - this.distractedPenalty();
   });
 
   hasConditional = computed<boolean>(() => {

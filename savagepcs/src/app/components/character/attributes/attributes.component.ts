@@ -19,4 +19,5 @@ export class AttributesComponent {
   attributes = input<CharacterAttribute[]>([]);
   woundsPenalty = input<number>(0);
   fatiguePenalty = input<number>(0);
+  distractedPenalty = input<number>(0);
 }

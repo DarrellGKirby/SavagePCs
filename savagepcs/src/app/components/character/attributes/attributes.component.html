@@ -7,7 +7,12 @@
                     {{attribute.name}}
                 </b>
                 <img [src]="attribute.die.imagePath" matTooltip="{{attribute.die.description}}" matTooltipPosition="after">
-                <app-bonus [bonuses]="attribute.penalties" [woundsPenalty]="woundsPenalty()" [fatiguePenalty]="fatiguePenalty()"></app-bonus>
+                <app-bonus
+                    [bonuses]="attribute.penalties"
+                    [woundsPenalty]="woundsPenalty()"
+                    [fatiguePenalty]="fatiguePenalty()"
+                    [distractedPenalty]="distractedPenalty()"
+                ></app-bonus>
             </div>
         }
     </mat-card-content>

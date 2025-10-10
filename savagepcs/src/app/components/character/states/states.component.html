@@ -2,19 +2,60 @@
     <mat-card-title>States</mat-card-title>
     <mat-card-content>
         <div class="row-container">
-            <div>WOUNDS</div>
-            <div>FATIGUE</div>
+            <div class="penaltysize">Wounds: <span>{{currentWound()}}</span></div>
+            <div class="penaltysize">Shaken<mat-checkbox checked="{{shaken()}}" disabled></mat-checkbox></div>
+            <div class="penaltysize">Fatigue: <span>{{FATIGUE_LEVEL[currentFatigue()]}}</span></div>
         </div>
         <div class="row-container">
-            <div>
-                <span class="numberspan">{{currentWound()}}</span>
+            <div class="penaltysize">
                 <button mat-flat-button (click)="addWound()" class="penaltybutton badbutton">Add</button>
                 <button mat-flat-button (click)="healWound()" class="penaltybutton goodbutton">Heal</button>
             </div>
-            <div>
-                <span>{{FATIGUE_LEVEL[currentFatigue()]}}</span>
+            <div class="penaltysize">
+                <button mat-flat-button (click)="shaken.set(true)" class="penaltybutton badbutton">Shaken</button>
+                <button mat-flat-button (click)="shaken.set(false)" class="penaltybutton goodbutton">Recovered</button>
+            </div>
+            <div class="penaltysize">
                 <button mat-flat-button class="penaltybutton badbutton" (click)="addFatigue()">Stress</button>
                 <button mat-flat-button class="penaltybutton goodbutton" (click)="removeFatigue()">Rest</button>
+            </div>
+        </div>
+        <div class="row-container">
+            <div class="penaltysize">Distracted<mat-checkbox checked="{{distracted()}}" disabled></mat-checkbox></div>
+            <div class="penaltysize">Vulnerable<mat-checkbox checked="{{vulnerable()}}" disabled></mat-checkbox></div>
+            <div class="penaltysize">Stunned<mat-checkbox checked="{{stunned()}}" disabled></mat-checkbox></div>
+        </div>
+        <div class="row-container">
+            <div class="penaltysize">
+                <button mat-flat-button (click)="setDistracted(true)" class="penaltybutton badbutton">Distracted</button>
+                <button mat-flat-button (click)="setDistracted(false)" class="penaltybutton goodbutton">Recovered</button>
+            </div>
+            <div class="penaltysize">
+                <button mat-flat-button (click)="setVulnerable(true)" class="penaltybutton badbutton">Vulnerable</button>
+                <button mat-flat-button (click)="setVulnerable(false)" class="penaltybutton goodbutton">Recovered</button>
+            </div>
+            <div class="penaltysize">
+                <button mat-flat-button (click)="setStunned(true)" class="penaltybutton badbutton">Stunned</button>
+                <button mat-flat-button (click)="setStunned(false)" class="penaltybutton goodbutton">Recovered</button>
+            </div>
+        </div>
+        <div class="row-container">
+            <div class="penaltysize">Incapacitated<mat-checkbox checked="{{incapacitated()}}" disabled></mat-checkbox></div>
+            <div class="penaltysize">Entangled<mat-checkbox checked="{{entangled()}}" disabled></mat-checkbox></div>
+            <div class="penaltysize">Bound<mat-checkbox checked="{{bound()}}" disabled></mat-checkbox></div>
+        </div>
+        <div class="row-container">
+            <div class="penaltysize">
+                <button mat-flat-button (click)="setIncapacitated(true)" class="penaltybutton badbutton">Incapacitated</button>
+                <button mat-flat-button (click)="setIncapacitated(false)" class="penaltybutton goodbutton">Recovered</button>
+            </div>
+            <div class="penaltysize">
+                <button mat-flat-button (click)="setEntangled(true)" class="penaltybutton badbutton">Entangled</button>
+                <button mat-flat-button (click)="setEntangled(false)" class="penaltybutton goodbutton">Recovered</button>
+            </div>
+            <div class="penaltysize">
+                <button mat-flat-button (click)="setBound(true)" class="penaltybutton badbutton">Bound</button>
+                <button mat-flat-button (click)="setBound(false)" class="penaltybutton goodbutton">Recovered</button>
             </div>
         </div>
     </mat-card-content>
