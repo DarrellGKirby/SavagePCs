@@ -4,6 +4,7 @@ import { CharacterEdge } from "./char-edge";
 import { CharacterHindrance } from "./char-hindrance";
 import { Skill } from "./skill";
 import { Equipment } from "./equipment";
+import { advancement } from "./advancement";
 
 export interface Character {
     id: number;
@@ -16,4 +17,5 @@ export interface Character {
     gear: Equipment[];
     speed: number;
     woundsLimit: number;
+    advancements: advancement[];
 }

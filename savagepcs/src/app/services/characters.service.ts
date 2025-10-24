@@ -21,7 +21,8 @@ export class CharactersService {
     credits: 0,
     gear: [],
     speed: 6,
-    woundsLimit: 3
+    woundsLimit: 3,
+    advancements: []
   }
 
   pcList = signal<PCMenuItem[]>([]);
@@ -30,14 +31,20 @@ export class CharactersService {
   constructor() { }
 
   getPCList() {
-    var list = [ {
-      id: 1,
-      pcName: 'Ratia Horn'
-    },
-    {
-      id: 2,
-      pcName: 'Rast'
-    } ];
+    var list = [
+      {
+        id: 1,
+        pcName: 'Ratia Horn'
+      },
+      {
+        id: 2,
+        pcName: 'Rast'
+      },
+      {
+        id: 3,
+        pcName: 'Ratia Horn (N1)'
+      }
+    ];
     this.pcList.set(list);
   }
 
@@ -791,7 +798,8 @@ export class CharactersService {
         }
       ],
       speed: 6,
-      woundsLimit: 3
+      woundsLimit: 3,
+      advancements: []
     },
     {
       id: 2,
@@ -1642,7 +1650,761 @@ export class CharactersService {
         }
       ],
       speed: 6,
-      woundsLimit: 3
+      woundsLimit: 3,
+      advancements: []
+    },
+    {
+      id: 3,
+      description: {
+        name: 'Ratia Horn (N1)',
+        species: 'Human',
+        archetype: 'Tatsuken Graduate'
+      },
+      attributes: [
+        {
+          id: 0,
+          name: 'Agility',
+          abbreviation: 'Ag',
+          die: {
+            id: 3,
+            description: 'd8',
+            value: 8,
+            imagePath: 'd8.png'
+          },
+          penalties: []
+        },
+        {
+          id: 1,
+          name: 'Smarts',
+          abbreviation: 'Sm',
+          die: {
+            id: 3,
+            description: 'd8',
+            value: 8,
+            imagePath: 'd8.png'
+          },
+          penalties: []
+        },
+        {
+          id: 2,
+          name: 'Spirit',
+          abbreviation: 'Sp',
+          die: {
+            id: 3,
+            description: 'd8',
+            value: 8,
+            imagePath: 'd8.png'
+          },
+          penalties: [
+            {
+              source: 'Hindrance: Night Terrors',
+              amount: -1,
+              conditional: false,
+              condition: ''
+            }
+          ]
+        },
+        {
+          id: 3,
+          name: 'Strength',
+          abbreviation: 'St',
+          die: {
+            id: 2,
+            description: 'd6',
+            value: 6,
+            imagePath: 'd6.png'
+          },
+          penalties: []
+        },
+        {
+          id: 4,
+          name: 'Vigor',
+          abbreviation: 'Vi',
+          die: {
+            id: 2,
+            description: 'd6',
+            value: 6,
+            imagePath: 'd6.png'
+          },
+          penalties: [
+            {
+              source: 'Hindrance: Anemic',
+              amount: -2,
+              conditional: true,
+              condition: 'When resisting fatigue'
+            }
+          ]
+        }
+      ],
+      skills: [
+        {
+          name: 'Academics',
+          attribute: 'Smarts',
+          proficient: true,
+          defaultDie: 0,
+          die: {
+            id: 2,
+            description: 'd6',
+            value: 6,
+            imagePath: 'd6.png'
+          },
+          specializations: ['Applied Theory'],
+          penalties: []
+        },
+        {
+          name: 'Athletics',
+          attribute: 'Agility',
+          proficient: true,
+          defaultDie: 1,
+          die: {
+            id: 1,
+            description: 'd4',
+            value: 4,
+            imagePath: 'd4.png'
+          },
+          specializations: [],
+          penalties: []
+        },
+        {
+          name: 'Battle',
+          attribute: 'Smarts',
+          proficient: true,
+          defaultDie: 0,
+          die: {
+            id: 2,
+            description: 'd6',
+            value: 6,
+            imagePath: 'd6.png'
+          },
+          specializations: ['Naval', 'Land'],
+          penalties: []
+        },
+        {
+          name: 'Boating',
+          attribute: 'Agile',
+          proficient: false,
+          defaultDie: 0,
+          die: {
+            id: 0,
+            description: 'd4-2',
+            value: 2,
+            imagePath: 'd4-2.png'
+          },
+          specializations: [],
+          penalties: []
+        },
+        {
+          name: 'Common Knowledge',
+          attribute: 'Smarts',
+          proficient: true,
+          defaultDie: 1,
+          die: {
+            id: 1,
+            description: 'd4',
+            value: 4,
+            imagePath: 'd4.png'
+          },
+          specializations: [],
+          penalties: []
+        },
+        {
+          name: 'Driving',
+          attribute: 'Agility',
+          proficient: false,
+          defaultDie: 0,
+          die: {
+            id: 0,
+            description: 'd4-2',
+            value: 2,
+            imagePath: 'd4-2.png'
+          },
+          specializations: [],
+          penalties: []
+        },
+        {
+          name: 'Electronics',
+          attribute: 'Smarts',
+          proficient: true,
+          defaultDie: 0,
+          die: {
+            id: 2,
+            description: 'd6',
+            value: 6,
+            imagePath: 'd6.png'
+          },
+          specializations: ['Sensors & Comms', 'Vehicle Systems'],
+          penalties: []
+        },
+        {
+          name: 'Faith',
+          attribute: 'Spirit',
+          proficient: false,
+          defaultDie: 0,
+          die: {
+            id: 0,
+            description: 'd4-2',
+            value: 2,
+            imagePath: 'd4-2.png'
+          },
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Night Terrors',
+              amount: -1,
+              conditional: false,
+              condition: ''
+            }
+          ]
+        },
+        {
+          name: 'Fighting',
+          attribute: 'Agility',
+          proficient: true,
+          defaultDie: 0,
+          die: {
+            id: 1,
+            description: 'd4',
+            value: 4,
+            imagePath: 'd4.png'
+          },
+          specializations: ['Martial Arts'],
+          penalties: []
+        },
+        {
+          name: 'Focus',
+          attribute: 'Spirit',
+          proficient: false,
+          defaultDie: 0,
+          die: {
+            id: 0,
+            description: 'd4-2',
+            value: 2,
+            imagePath: 'd4-2.png'
+          },
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Night Terrors',
+              amount: -1,
+              conditional: false,
+              condition: ''
+            }
+          ]
+        },
+        {
+          name: 'Gambling',
+          attribute: 'Smarts',
+          proficient: false,
+          defaultDie: 0,
+          die: {
+            id: 0,
+            description: 'd4-2',
+            value: 2,
+            imagePath: 'd4-2.png'
+          },
+          specializations: [],
+          penalties: []
+        },
+        {
+          name: 'Hacking',
+          attribute: 'Smarts',
+          proficient: false,
+          defaultDie: 0,
+          die: {
+            id: 0,
+            description: 'd4-2',
+            value: 2,
+            imagePath: 'd4-2.png'
+          },
+          specializations: [],
+          penalties: []
+        },
+        {
+          name: 'Healing',
+          attribute: 'Smarts',
+          proficient: false,
+          defaultDie: 0,
+          die: {
+            id: 0,
+            description: 'd4-2',
+            value: 2,
+            imagePath: 'd4-2.png'
+          },
+          specializations: [],
+          penalties: []
+        },
+        {
+          name: 'Intimidation',
+          attribute: 'Spirit',
+          proficient: false,
+          defaultDie: 0,
+          die: {
+            id: 0,
+            description: 'd4-2',
+            value: 2,
+            imagePath: 'd4-2.png'
+          },
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Night Terrors',
+              amount: -1,
+              conditional: false,
+              condition: ''
+            }
+          ]
+        },
+        {
+          name: 'Language',
+          attribute: 'Smarts',
+          proficient: true,
+          defaultDie: 0,
+          die: {
+            id: 2,
+            description: 'd6',
+            value: 6,
+            imagePath: 'd6.png'
+          },
+          specializations: ['Terran Standard', 'Savannat', 'Pacasian', 'Variksche'],
+          penalties: []
+        },
+        {
+          name: 'Notice',
+          attribute: 'Smarts',
+          proficient: true,
+          defaultDie: 1,
+          die: {
+            id: 1,
+            description: 'd4',
+            value: 4,
+            imagePath: 'd4.png'
+          },
+          specializations: [],
+          penalties: []
+        },
+        {
+          name: 'Occult',
+          attribute: 'Smarts',
+          proficient: false,
+          defaultDie: 0,
+          die: {
+            id: 0,
+            description: 'd4-2',
+            value: 2,
+            imagePath: 'd4-2.png'
+          },
+          specializations: [],
+          penalties: []
+        },
+        {
+          name: 'Performance',
+          attribute: 'Spirit',
+          proficient: false,
+          defaultDie: 0,
+          die: {
+            id: 0,
+            description: 'd4-2',
+            value: 2,
+            imagePath: 'd4-2.png'
+          },
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Night Terrors',
+              amount: -1,
+              conditional: false,
+              condition: ''
+            }
+          ]
+        },
+        {
+          name: 'Persuasion',
+          attribute: 'Spirit',
+          proficient: true,
+          defaultDie: 1,
+          die: {
+            id: 3,
+            description: 'd8',
+            value: 8,
+            imagePath: 'd8.png'
+          },
+          specializations: ['Leadership'],
+          penalties: [
+            {
+              source: 'Hindrance: Night Terrors',
+              amount: -1,
+              conditional: false,
+              condition: ''
+            }
+          ]
+        },
+        {
+          name: 'Piloting',
+          attribute: 'Agility',
+          proficient: false,
+          defaultDie: 0,
+          die: {
+            id: 0,
+            description: 'd4-2',
+            value: 2,
+            imagePath: 'd4-2.png'
+          },
+          specializations: [],
+          penalties: []
+        },
+        {
+          name: 'Psionics',
+          attribute: 'Spirit',
+          proficient: false,
+          defaultDie: 0,
+          die: {
+            id: 0,
+            description: 'd4-2',
+            value: 2,
+            imagePath: 'd4-2.png'
+          },
+          specializations: [],
+          penalties: [
+            {
+              source: 'Hindrance: Night Terrors',
+              amount: -1,
+              conditional: false,
+              condition: ''
+            }
+          ]
+        },
+        {
+          name: 'Repair',
+          attribute: 'Smarts',
+          proficient: true,
+          defaultDie: 0,
+          die: {
+            id: 1,
+            description: 'd4',
+            value: 4,
+            imagePath: 'd4.png'
+          },
+          specializations: ['Starships'],
+          penalties: []
+        },
+        {
+          name: 'Research',
+          attribute: 'Smarts',
+          proficient: false,
+          defaultDie: 0,
+          die: {
+            id: 0,
+            description: 'd4-2',
+            value: 2,
+            imagePath: 'd4-2.png'
+          },
+          specializations: [],
+          penalties: []
+        },
+        {
+          name: 'Riding',
+          attribute: 'Agility',
+          proficient: false,
+          defaultDie: 0,
+          die: {
+            id: 0,
+            description: 'd4-2',
+            value: 2,
+            imagePath: 'd4-2.png'
+          },
+          specializations: [],
+          penalties: []
+        },
+        {
+          name: 'Science',
+          attribute: 'Smarts',
+          proficient: true,
+          defaultDie: 0,
+          die: {
+            id: 1,
+            description: 'd4',
+            value: 4,
+            imagePath: 'd4.png'
+          },
+          specializations: ['Physics'],
+          penalties: []
+        },
+        {
+          name: 'Shooting',
+          attribute: 'Agility',
+          proficient: true,
+          defaultDie: 0,
+          die: {
+            id: 2,
+            description: 'd6',
+            value: 6,
+            imagePath: 'd6.png'
+          },
+          specializations: ['Personal Guns'],
+          penalties: []
+        },
+        {
+          name: 'Stealth',
+          attribute: 'Agility',
+          proficient: true,
+          defaultDie: 1,
+          die: {
+            id: 1,
+            description: 'd4',
+            value: 4,
+            imagePath: 'd4.png'
+          },
+          specializations: [],
+          penalties: []
+        },
+        {
+          name: 'Survival',
+          attribute: 'Smarts',
+          proficient: false,
+          defaultDie: 0,
+          die: {
+            id: 0,
+            description: 'd4-2',
+            value: 2,
+            imagePath: 'd4-2.png'
+          },
+          specializations: [],
+          penalties: []
+        },
+        {
+          name: 'Taunt',
+          attribute: 'Smarts',
+          proficient: false,
+          defaultDie: 0,
+          die: {
+            id: 0,
+            description: 'd4-2',
+            value: 2,
+            imagePath: 'd4-2.png'
+          },
+          specializations: [],
+          penalties: []
+        },
+        {
+          name: 'Thievery',
+          attribute: 'Agility',
+          proficient: false,
+          defaultDie: 0,
+          die: {
+            id: 0,
+            description: 'd4-2',
+            value: 2,
+            imagePath: 'd4-2.png'
+          },
+          specializations: [],
+          penalties: []
+        }
+      ],
+      hindrances: [
+        {
+          name: 'Vow',
+          subName: 'Serving the Corps',
+          fromArchetype: true,
+          isMajor: true,
+          source: 'Core, p. 28',
+          description: [
+            'The character has sworn an oath to someone or something he believes in.',
+            'The danger in fulfilling the Vow and how often it might occur determines the level of the Hindrance. A Minor Vow might be to serve an order with a broad mandate that rarely conflicts with the party’s goals.',
+            'A Major Vow makes long-term and frequent demands on the servant’s time and results in great risks to his life.'
+          ],
+          shortDescription: 'The vow requires frequent and long-term demands with great risk of life.'
+        },
+        {
+          name: 'Night Terrors',
+          subName: '',
+          fromArchetype: false,
+          isMajor: true,
+          source: 'Horror, p. 7',
+          description: [
+            'The Land of Nod is a constant nightmare for your investigator. He tosses and turns like a victim on a hot rack and likely keeps everyone within earshot of him awake with his nightly torment. The repeated barrage on his psyche results in an overall weakened resolve. He subtracts 1 from all Spirit rolls.',
+            'Anyone who sleeps nearby likely has a long night ahead of them as well (see Sleep in Savage Worlds for possible consequences).'
+          ],
+          shortDescription: '-1 penalty to all Spirit rolls.'
+        },
+        {
+          name: 'FTL Sickness',
+          subName: '',
+          fromArchetype: false,
+          isMajor: false,
+          source: 'Science Fiction, p. 23',
+          description: [
+            'Something about the spacer doesn’t sit right with the bizarre warping effects of hyperspace.  After each use of FTL (Faster Than Light) travel, he suffers a level of Fatigue that takes 24 hours to fade. FTL Sickness can cause Incapacitation but not death.',
+            'As a Major Hindrance, the hero must make a Vigor roll (after taking Fatigue) or be Exhausted. A Critical Failure results in a heart attack (see the Fear Table in Savage Worlds).',
+            'Note: This Hindrance may only be taken in campaigns where FTL travel is common.'
+          ],
+          shortDescription: 'Suffers a level of Fatigue for 25 hours after exiting slipstream.'
+        },
+        {
+          name: 'Anemic',
+          subName: '',
+          fromArchetype: false,
+          isMajor: false,
+          source: 'Core, P. 22',
+          description: [
+            'Anemic characters are particularly susceptible to sickness, disease, environmental effects, and fatigue. They subtract 2 from Vigor rolls made to resist Fatigue (see Hazards, starting on page 125).'
+          ],
+          shortDescription: '−2 Vigor when resisting Fatigue.'
+        }
+      ],
+      edges: [
+        {
+          name: 'Linguist',
+          purchase: 'Free',
+          fromArchetype: false,
+          source: 'Core, p. 50',
+          description: [
+            'This world-traveler has an ear for languages.  She begins play knowing Terran Standard and one additional language as their home language.  She gets an additional language for every die above d4 in Smarts.'
+          ],
+          shortDescription: 'Character starts with 2 languages plus additional languages based on Smarts.'
+        },
+        {
+          name: 'Unarmored Hero',
+          purchase: 'Free',
+          fromArchetype: false,
+          source: 'Core, p. 141',
+          description: [
+            'Pulp action tales often feature heroes with little or no armor defeating far more heavily armored adversaries.',
+            'In these settings, if a Wild Card chooses not to wear any armor (ignoring shields), he adds +2 bonus to his Soak rolls!'
+          ],
+          shortDescription: '+2 to Soak rolls when wearing no armor.'
+        },
+        {
+          name: 'Common Bond',
+          purchase: 'Human',
+          fromArchetype: false,
+          source: 'Core, p. 50',
+          description: [
+            'Selfless heroes and determined leaders know their greatest strength often comes from their companions, and are willing to give some of their own fortune, fate, or luck to support them.',
+            'A character with this Edge may freely give her Bennies to any other character she can communicate with. The player should explain what form this takes, from a quick shout of encouragement to a welcome pat on the back.'
+          ],
+          shortDescription: 'The hero may freely give her Bennies to others.'
+        },
+        {
+          name: 'Command',
+          purchase: '',
+          fromArchetype: true,
+          source: 'Core, p. 45',
+          description: [
+            'Command is the basic ability to give clear instructions and support to allies in the thick of battle. Extras in Command Range add +1 to their Spirit rolls when attempting to recover from being Shaken and Vigor when attempting to recover from being Stunned.'
+          ],
+          shortDescription: '+1 to Extras’ Shaken or Stunned recovery rolls.'
+        }
+      ],
+      credits: 90,
+      gear: [
+        {
+          category: 'Adventuring Gear',
+          type: 'Clothing',
+          name: 'Casual Clothing',
+          weight : 2,
+          cost: 20,
+          description: '',
+          provided: true
+        },
+        {
+          category: 'Cyberware',
+          type: 'Body',
+          name: 'Synaptic Anchor',
+          weight : 0,
+          cost: 1000,
+          description: 'This core implant enables wireless access to the Mnemoscape. It is the foundational implant for all Neural Interface-based cyberware. Connection is a limited free action.',
+          provided: true
+        },
+        {
+          category: 'Adventuring Gear',
+          type: 'Electronics',
+          name: 'Personal Data Device',
+          weight : 0,
+          cost: 500,
+          description: 'PDDs are upgraded versions of modern mobile phones with a month-long duration on a single charge. PDDs grant a free reroll on Common Knowledge rolls when used to gather information from the CoreNet.',
+          provided: true
+        },
+        {
+          category: 'Adventuring Gear',
+          type: 'Clothing',
+          name: 'Official Uniform',
+          weight : 3,
+          cost: 50,
+          description: '',
+          provided: true
+        },
+        {
+          category: 'Adventuring Gear',
+          type: 'Clothing',
+          name: 'Dress Uniform',
+          weight : 3,
+          cost: 200,
+          description: '',
+          provided: false
+        },
+        {
+          category: 'Adventuring Gear',
+          type: 'Clothing',
+          name: 'Magnetic Boots',
+          weight : 4,
+          cost: 100,
+          description: 'Magnets in these heavy boots allow characters to walk on any metal surface at half Pace (they may not run).',
+          provided: false
+        },
+        {
+          category: 'Adventuring Gear',
+          type: 'Electronics',
+          name: 'Language Translator',
+          weight : 1,
+          cost: 250,
+          description: 'Translates all known, sentient languages at d10 for common tongues and d6 for languages with lesser databases. Does not work for glyphs or forbidden languages.',
+          provided: false
+        },
+        {
+          category: 'Adventuring Gear',
+          type: 'Basic Gear',
+          name: 'Flashlight',
+          weight : 1,
+          cost: 20,
+          description: 'Projects a 10” beam.',
+          provided: false
+        },
+        {
+          category: 'Ranged Weapon',
+          type: 'Slugthrower',
+          name: 'Medium Pistol',
+          weight : 2,
+          cost: 250,
+          description: '2d6+1, AP: 2, Shots: 10',
+          provided: false
+        },
+        {
+          category: 'Ranged Weapon',
+          type: 'Slugthrower',
+          name: 'Medium Pistol Ammo',
+          weight : 2,
+          cost: 20,
+          description: '50 rounds',
+          provided: false
+        },
+        {
+          category: 'Ranged Weapon',
+          type: 'Slugthrower',
+          name: 'Medium Pistol Ammo',
+          weight : 2,
+          cost: 20,
+          description: '50 rounds',
+          provided: false
+        }
+      ],
+      speed: 6,
+      woundsLimit: 3,
+      advancements: [
+        {
+          level: 'Novice 1',
+          description: 'Vigor'
+        }
+      ]
     }
   ];
 }
