@@ -9,10 +9,11 @@ import { EdgesComponent } from "./edges/edges.component";
 import { GearComponent } from "./gear/gear.component";
 import { DerivedComponent } from "./derived/derived.component";
 import { StatesComponent } from "./states/states.component";
+import { AdvancementComponent } from "./advancement/advancement.component";
 
 @Component({
   selector: 'app-character',
-  imports: [DescriptionComponent, AttributesComponent, SkillsComponent, HindrancesComponent, EdgesComponent, GearComponent, DerivedComponent, StatesComponent],
+  imports: [DescriptionComponent, AttributesComponent, SkillsComponent, HindrancesComponent, EdgesComponent, GearComponent, DerivedComponent, StatesComponent, AdvancementComponent],
   templateUrl: './character.component.html',
   styleUrl: './character.component.css'
 })
