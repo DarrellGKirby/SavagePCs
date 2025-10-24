@@ -1757,10 +1757,10 @@ export class CharactersService {
           proficient: true,
           defaultDie: 1,
           die: {
-            id: 1,
-            description: 'd4',
-            value: 4,
-            imagePath: 'd4.png'
+            id: 2,
+            description: 'd6',
+            value: 6,
+            imagePath: 'd6.png'
           },
           specializations: [],
           penalties: []
@@ -2384,7 +2384,7 @@ export class CharactersService {
           name: 'Medium Pistol Ammo',
           weight : 2,
           cost: 20,
-          description: '50 rounds',
+          description: '45 rounds',
           provided: false
         },
         {
@@ -2402,7 +2402,7 @@ export class CharactersService {
       advancements: [
         {
           level: 'Novice 1',
-          description: 'Vigor'
+          description: 'Vigor +1, Athletics +1'
         }
       ]
     }
