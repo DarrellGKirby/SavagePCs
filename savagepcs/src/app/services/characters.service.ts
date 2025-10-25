@@ -1757,10 +1757,10 @@ export class CharactersService {
           proficient: true,
           defaultDie: 1,
           die: {
-            id: 2,
-            description: 'd6',
-            value: 6,
-            imagePath: 'd6.png'
+            id: 1,
+            description: 'd4',
+            value: 4,
+            imagePath: 'd4.png'
           },
           specializations: [],
           penalties: []
@@ -1827,10 +1827,10 @@ export class CharactersService {
           proficient: true,
           defaultDie: 0,
           die: {
-            id: 2,
-            description: 'd6',
-            value: 6,
-            imagePath: 'd6.png'
+            id: 3,
+            description: 'd8',
+            value: 8,
+            imagePath: 'd8.png'
           },
           specializations: ['Sensors & Comms', 'Vehicle Systems'],
           penalties: []
