@@ -2402,7 +2402,7 @@ export class CharactersService {
       advancements: [
         {
           level: 'Novice 1',
-          description: 'Vigor +1, Athletics +1'
+          description: 'Vigor +1, Electronics +1'
         }
       ]
     }
